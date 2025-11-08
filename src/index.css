@@ -101,3 +101,35 @@ All colors MUST be HSL.
     @apply bg-background text-foreground;
   }
 }
+
+/* ------------------------------------------------------------------ */
+/* Generate Tailwind utilities from CSS variables                     */
+/* ------------------------------------------------------------------ */
+@layer utilities {
+  /* Backgrounds */
+  .bg-background { @apply bg-[hsl(var(--background))]; }
+  .bg-foreground { @apply bg-[hsl(var(--foreground))]; }
+  .bg-card       { @apply bg-[hsl(var(--card))]; }
+  .bg-popover    { @apply bg-[hsl(var(--popover))]; }
+
+  /* Text */
+  .text-foreground        { @apply text-[hsl(var(--foreground))]; }
+  .text-primary           { @apply text-[hsl(var(--primary))]; }
+  .text-primary-foreground{ @apply text-[hsl(var(--primary-foreground))]; }
+  .text-accent            { @apply text-[hsl(var(--accent))]; }
+  .text-accent-foreground { @apply text-[hsl(var(--accent-foreground))]; }
+  .text-muted-foreground  { @apply text-[hsl(var(--muted-foreground))]; }
+
+  /* Borders & Rings */
+  .border-border { @apply border-[hsl(var(--border))]; }
+  .ring-ring     { @apply ring-[hsl(var(--ring))]; }
+
+  /* Background Images (Gradients) */
+  .bg-gradient-hero { @apply bg-[var(--gradient-hero)]; }
+  .bg-gradient-card { @apply bg-[var(--gradient-card)]; }  /* Fixed: was --:--gradient-card */
+
+  /* Shadows */
+  .shadow-glow  { @apply shadow-[var(--shadow-glow)]; }
+  .shadow-card  { @apply shadow-[var(--shadow-card)]; }
+}
+
