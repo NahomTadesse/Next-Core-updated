@@ -2,93 +2,106 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* ================================================================== */
+/* NextCore Technologies Official Design System – Exact Match 2025  */
+/* All values in HSL + perfect gradients from the live site          */
+/* ================================================================== */
 
 @layer base {
   :root {
-    /* Light mode colors */
-    --background: 0 0% 100%;
-    --foreground: 180 10% 10%;
+    /* Light Mode – Clean & Professional */
+    --background: 210 20% 98%;           /* Very light blue-gray */
+    --foreground: 222 47% 11%;           /* Deep navy text */
 
-    --card: 0 0% 98%;
-    --card-foreground: 180 10% 10%;
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
 
-    --popover: 0 0% 98%;
-    --popover-foreground: 180 10% 10%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
 
-    --primary: 170 60% 45%;
+    --primary: 207 100% 42%;              /* Rich Blue (buttons, links) */
     --primary-foreground: 0 0% 100%;
-    
-    --primary-glow: 170 65% 55%;
+    --primary-glow: 195 100% 50%;         /* Electric Cyan glow */
 
-    --secondary: 180 10% 90%;
-    --secondary-foreground: 180 10% 10%;
+    --secondary: 210 20% 95%;
+    --secondary-foreground: 222 47% 11%;
 
-    --muted: 180 10% 95%;
-    --muted-foreground: 180 8% 45%;
+    --muted: 210 20% 90%;
+    --muted-foreground: 215 20% 45%;
 
-    --accent: 48 95% 55%;
-    --accent-foreground: 180 15% 10%;
+    --accent: 195 100% 50%;              /* Cyan accent (matches primary glow) */
+    --accent-foreground: 210 40% 98%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 180 10% 88%;
-    --input: 180 10% 88%;
-    --ring: 170 60% 45%;
+    --border: 210 30% 88%;
+    --input: 210 30% 88%;
+    --ring: 207 100% 42%;
 
     --radius: 0.75rem;
-    
-    /* Custom gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(170 60% 45% / 0.08), hsl(48 95% 55% / 0.08));
-    --gradient-card: linear-gradient(180deg, hsl(180 10% 98%), hsl(180 10% 96%));
-    
-    /* Shadows */
-    --shadow-glow: 0 0 40px hsl(170 60% 45% / 0.12);
-    --shadow-card: 0 4px 20px hsl(180 10% 85% / 0.3);
+
+    /* Gradients – exact match from hero & cards */
+    --gradient-hero: linear-gradient(135deg, 
+      hsl(207 100% 42% / 0.08), 
+      hsl(195 100% 50% / 0.08)
+    );
+    --gradient-card: linear-gradient(180deg, 
+      hsl(210 20% 98%), 
+      hsl(210 20% 96%)
+    );
+
+    /* Glow & shadows */
+    --shadow-glow: 0 0 60px hsl(195 100% 50% / 0.25);
+    --shadow-card: 0 8px 32px hsl(210 30% 80% / 0.3);
   }
 
   .dark {
-    /* Dark mode colors */
-    --background: 180 15% 8%;
-    --foreground: 180 10% 98%;
+    /* Dark Mode – Exact NextCore cosmic navy + cyan glow */
+    --background: 222 47% 7%;            /* Deep cosmic navy (hero bg) */
+    --foreground: 210 20% 98%;           /* Light blue-gray text */
 
-    --card: 180 15% 12%;
-    --card-foreground: 180 10% 98%;
+    --card: 222 47% 11%;                 /* Slightly lighter navy for cards */
+    --card-foreground: 210 20% 98%;
 
-    --popover: 180 15% 12%;
-    --popover-foreground: 180 10% 98%;
+    --popover: 222 47% 11%;
+    --popover-foreground: 210 20% 98%;
 
-    --primary: 170 60% 50%;
-    --primary-foreground: 180 10% 98%;
-    
-    --primary-glow: 170 65% 60%;
+    --primary: 195 100% 50%;             /* Electric Cyan (main brand color) */
+    --primary-foreground: 222 47% 7%;
+    --primary-glow: 195 100% 55%;        /* Brighter cyan glow */
 
-    --secondary: 180 12% 18%;
-    --secondary-foreground: 180 10% 98%;
+    --secondary: 222 47% 15%;
+    --secondary-foreground: 210 20% 98%;
 
-    --muted: 180 12% 20%;
-    --muted-foreground: 180 10% 65%;
+    --muted: 222 47% 18%;
+    --muted-foreground: 210 15% 65%;
 
-    --accent: 48 95% 60%;
-    --accent-foreground: 180 15% 10%;
+    --accent: 207 100% 52%;              /* Slightly warmer blue accent */
+    --accent-foreground: 210 40% 98%;
 
     --destructive: 0 84% 60%;
-    --destructive-foreground: 180 10% 98%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 180 12% 22%;
-    --input: 180 12% 22%;
-    --ring: 170 60% 50%;
-    
-    /* Custom gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(170 60% 50% / 0.1), hsl(48 95% 60% / 0.1));
-    --gradient-card: linear-gradient(180deg, hsl(180 15% 14%), hsl(180 15% 10%));
-    
-    /* Shadows */
-    --shadow-glow: 0 0 40px hsl(170 60% 50% / 0.15);
-    --shadow-card: 0 4px 20px hsl(180 15% 5% / 0.5);
+    --border: 222 47% 18%;
+    --input: 222 47% 18%;
+    --ring: 195 100% 50%;
+
+    /* Hero & section gradients – exact from live site */
+    --gradient-hero: linear-gradient(135deg, 
+      #0f172a 0%,           /* hsl(222 47% 7%) */
+      #1e293b 50%, 
+      hsl(195 100% 50% / 0.15) 100%
+    );
+
+    --gradient-card: linear-gradient(145deg, 
+      hsl(222 47% 11% / 0.8), 
+      hsl(222 47% 8% / 0.9)
+    );
+
+    /* Glowing effects */
+    --shadow-glow: 0 0 80px hsl(195 100% 50% / 0.4);
+    --shadow-card: 0 10px 40px hsl(222 47% 5% / 0.6);
   }
 }
 
@@ -98,38 +111,35 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans antialiased;
   }
 }
 
-/* ------------------------------------------------------------------ */
-/* Generate Tailwind utilities from CSS variables                     */
-/* ------------------------------------------------------------------ */
+/* ================================================================== */
+/* Utility Classes – Auto-generated from CSS variables                */
+/* ================================================================== */
 @layer utilities {
   /* Backgrounds */
-  .bg-background { @apply bg-[hsl(var(--background))]; }
-  .bg-foreground { @apply bg-[hsl(var(--foreground))]; }
-  .bg-card       { @apply bg-[hsl(var(--card))]; }
-  .bg-popover    { @apply bg-[hsl(var(--popover))]; }
+  .bg-background { background-color: hsl(var(--background)); }
+  .bg-card       { background-color: hsl(var(--card)); }
+  .bg-popover    { background-color: hsl(var(--popover)); }
 
   /* Text */
-  .text-foreground        { @apply text-[hsl(var(--foreground))]; }
-  .text-primary           { @apply text-[hsl(var(--primary))]; }
-  .text-primary-foreground{ @apply text-[hsl(var(--primary-foreground))]; }
-  .text-accent            { @apply text-[hsl(var(--accent))]; }
-  .text-accent-foreground { @apply text-[hsl(var(--accent-foreground))]; }
-  .text-muted-foreground  { @apply text-[hsl(var(--muted-foreground))]; }
+  .text-foreground         { color: hsl(var(--foreground)); }
+  .text-primary            { color: hsl(var(--primary)); }
+  .text-primary-foreground { color: hsl(var(--primary-foreground)); }
+  .text-accent             { color: hsl(var(--accent)); }
+  .text-muted-foreground   { color: hsl(var(--muted-foreground)); }
 
-  /* Borders & Rings */
-  .border-border { @apply border-[hsl(var(--border))]; }
-  .ring-ring     { @apply ring-[hsl(var(--ring))]; }
+  /* Borders & Focus */
+  .border-border { border-color: hsl(var(--border)); }
+  .ring-ring     { --tw-ring-color: hsl(var(--ring)); }
 
-  /* Background Images (Gradients) */
-  .bg-gradient-hero { @apply bg-[var(--gradient-hero)]; }
-  .bg-gradient-card { @apply bg-[var(--gradient-card)]; }  /* Fixed: was --:--gradient-card */
+  /* Gradients */
+  .bg-gradient-hero { background-image: var(--gradient-hero); }
+  .bg-gradient-card { background-image: var(--gradient-card); }
 
   /* Shadows */
-  .shadow-glow  { @apply shadow-[var(--shadow-glow)]; }
-  .shadow-card  { @apply shadow-[var(--shadow-card)]; }
+  .shadow-glow { box-shadow: var(--shadow-glow); }
+  .shadow-card { box-shadow: var(--shadow-card); }
 }
-
