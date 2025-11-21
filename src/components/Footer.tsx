@@ -87,10 +87,10 @@ import {
   Instagram, 
   Linkedin, 
   Twitter, 
-   Instagram as TikTok, 
-   Instagram as Threads, 
+  MessageCircle as Threads,
+  Globe,
   Facebook 
-} from "lucide-react"; // assuming you're using lucide-react icons (highly recommended)
+} from "lucide-react";
 
 const Footer = () => {
   const footerLinks = {
@@ -125,7 +125,7 @@ const Footer = () => {
       { 
         name: "TikTok", 
         path: "https://www.tiktok.com/@nextcoretechnologies",
-        icon: TikTok 
+        icon: Globe 
       },
       { 
         name: "Threads", 
