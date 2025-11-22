@@ -58,7 +58,7 @@
 
   .dark {
     /* Dark Mode – Exact NextCore cosmic navy + cyan glow */
-    --background: 222 47% 7%;            /* Deep cosmic navy (hero bg) */
+    --background: 219 57% 17%;            /* Deep cosmic navy (hero bg) */
     --foreground: 210 20% 98%;           /* Light blue-gray text */
 
     --card: 222 47% 11%;                 /* Slightly lighter navy for cards */
